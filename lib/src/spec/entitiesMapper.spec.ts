@@ -16,7 +16,7 @@ describe('mapper ', () => {
             let result = entitiesMapper.ExtractArrayValidationFnFromFieldValidationArray(validationsPerField);
 
             //Assert
-            expect(result.length).to.be.equal(1);
+            expect(result.length).to.be.equal(0);
         });
     });
 
