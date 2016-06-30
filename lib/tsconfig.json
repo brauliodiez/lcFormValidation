@@ -16,9 +16,8 @@
     "filesGlob": [
         "./src/**/*.tsx",
         "./src/**/*.ts",
-        "./typings/browser.d.ts",
-        "!./node_modules/**/*",
-        "!./typings/main/**/*"
+        "./typings/index.d.ts",
+        "!./node_modules/**/*"
     ],
     "exclude": [
         "node_modules",
