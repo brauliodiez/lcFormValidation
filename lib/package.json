@@ -4,7 +4,7 @@
   "description": "lcFormValidation is form library validation: heavily based on javascript (no html attributes / annotations), async by default. lcFormValidation is third party / framework agnostic, it can be easily integrated with frameworks like React.",
   "main": "dist/lc-form-validation.js",
   "scripts": {
-    "test": "karma --conf karma.coverage.conf.js start --browsers PhantomJS --single-run",
+    "test": "karma start karma.coverage.conf.js",
     "clean": "rimraf dist ReadmeResources",
     "build:prod": "cross-env NODE_ENV=production webpack --output-filename dist/lc-form-validation.min.js",
     "build:dev": "cross-env NODE_ENV=development webpack --output-filename dist/lc-form-validation.js",
