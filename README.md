@@ -1,4 +1,4 @@
-# lcFormValidation Library ![build status](https://travis-ci.org/Lemoncode/lcFormValidation.svg?branch=master "Build Status")
+# lcFormValidation Library ![build status](https://travis-ci.org/Lemoncode/lcFormValidation.svg?branch=master "Build Status") [![Code Climate](https://codeclimate.com/github/Lemoncode/lcFormValidation/badges/gpa.svg)](https://codeclimate.com/github/Lemoncode/lcFormValidation)
 
 lcFormValidation is a form library validation:
 

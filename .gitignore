@@ -6,3 +6,4 @@ typings/
 .idea/
 lib/README.md
 lib/ReadmeResources/
+lib/coverage/
