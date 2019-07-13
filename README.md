@@ -40,7 +40,7 @@ const customerFormValidation = createFormValidation(customerFormValidationConstr
 ### Validating the entire form
 
 ```js
-const viewModel = { login: 'jdoe@example.com', password: 'jdoe3981' };
+const viewModel = { firstName: 'John', lastName: 'Doe' };
 customerFormValidation
   .validateForm(viewModel)
   .then((validationResult) => {
