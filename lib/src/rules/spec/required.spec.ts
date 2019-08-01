@@ -63,6 +63,20 @@ describe('[required] validation rule tests =>', () => {
       expect(validationResult.errorMessage).to.be.empty;
     });
 
+    it('should return true if typeof value is number', () => {
+      // Arrange
+      const value = 1;
+      const vm = undefined;
+      const customParams: RequiredParams = undefined;
+
+      // Act
+      const validationResult = required(value, vm, customParams) as FieldValidationResult;
+
+      // Assert
+      expect(validationResult.succeeded).to.be.true;
+      expect(validationResult.type).to.be.equals('REQUIRED');
+      expect(validationResult.errorMessage).to.be.empty;
+    });
   });
 
   describe('When validating a string value', () => {

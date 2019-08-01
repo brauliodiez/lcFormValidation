@@ -17,7 +17,7 @@ export const required: FieldValidationFunction = (value, vm, customParams: Requi
 function isValidField(value, trim: boolean): boolean {
   return typeof value === 'string' ?
     isStringValid(value, trim) :
-    value === true;
+    value === true || typeof value === "number";
 }
 
 function isStringValid(value: string, trim: boolean): boolean {
