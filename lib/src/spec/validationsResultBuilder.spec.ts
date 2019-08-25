@@ -425,5 +425,38 @@ describe('ValidationsResultBuilder ', () => {
         expect(result.formGlobalErrors).to.have.length(1);
         expect(result.formGlobalErrors[0].key).to.be.equal('_GLOBAL_FORM_');
       });
+
+    it('Spec #26 => should returns new FormValidationResult equals ' +
+      '{ fieldErrors: { "nested.key1": { key: "nested.key1" }, test2: { key: "test2" } } } ' +
+      'when passing fieldValidationResults with two item first equals { key: "nested.key1" }' +
+      'and second equals { key: "test2" }', () => {
+        //Arrange
+        const fieldValidationResult1 = new FieldValidationResult();
+        fieldValidationResult1.key = 'nested.key1';
+
+        const fieldValidationResult2 = new FieldValidationResult();
+        fieldValidationResult2.key = 'test2';
+
+        const fieldValidationResults = [fieldValidationResult1, fieldValidationResult2];
+
+        //Act
+        const result = validationsResultBuilder.buildFormValidationsResult(fieldValidationResults);
+
+        //Assert
+        expect(result.fieldErrors).to.deep.equal({
+          'nested.key1': {
+            key: 'nested.key1',
+            succeeded: false,
+            errorMessage: '',
+            type: '',
+          } as FieldValidationResult,
+          test2: {
+            key: 'test2',
+            succeeded: false,
+            errorMessage: '',
+            type: '',
+          } as FieldValidationResult,
+        });
+      });
   });
 });

@@ -537,14 +537,12 @@ describe('ValidationEngine Validate Form', () => {
           expect(formValidationResult.succeeded).to.be.true;
 
           expect(formValidationResult.fieldErrors).to.deep.equal({
-            fullname: {
-              firstName: {
-                key: 'fullname.firstName',
-                succeeded: true,
-                type: 'REQUIRED',
-                errorMessage: '',
-              } as FieldValidationResult
-            },
+            'fullname.firstName': {
+              key: 'fullname.firstName',
+              succeeded: true,
+              type: 'REQUIRED',
+              errorMessage: '',
+            } as FieldValidationResult,
           });
 
           done();
@@ -580,14 +578,12 @@ describe('ValidationEngine Validate Form', () => {
           expect(formValidationResult.succeeded).to.be.false;
 
           expect(formValidationResult.fieldErrors).to.deep.equal({
-            fullname: {
-              firstName: {
-                key: 'fullname.firstName',
-                succeeded: false,
-                type: 'REQUIRED',
-                errorMessage: 'Mandatory field',
-              } as FieldValidationResult
-            },
+            'fullname.firstName': {
+              key: 'fullname.firstName',
+              succeeded: false,
+              type: 'REQUIRED',
+              errorMessage: 'Mandatory field',
+            } as FieldValidationResult,
           });
 
           done();
